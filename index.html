@@ -3,75 +3,113 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>کربلایی امیرعلی امینی | خادم اهل بیت (ع)</title>
+<title>کربلایی امیرعلی امینی</title>
 
 <style>
 body{
     margin:0;
     font-family:tahoma;
-    background:#111;
+    background: radial-gradient(circle, #1a1a1a, #000);
     color:white;
 }
 
+/* هدر */
 header{
-    background:#000;
-    padding:20px;
     text-align:center;
+    padding:40px 20px;
     border-bottom:2px solid gold;
 }
 
 header h1{
     color:gold;
     margin:0;
+    font-size:28px;
 }
 
-nav{
+header p{
+    color:#ccc;
+}
+
+/* عکس */
+.hero{
     text-align:center;
-    padding:15px;
+    margin-top:20px;
+}
+
+.hero img{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid gold;
+    box-shadow:0 0 25px gold;
+}
+
+/* منو */
+nav{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin:20px 0;
 }
 
 nav a{
     color:white;
     text-decoration:none;
     margin:10px;
+    padding:8px 15px;
+    border:1px solid gold;
+    border-radius:20px;
+    transition:0.3s;
 }
 
-.hero{
-    text-align:center;
-    padding:40px 20px;
+nav a:hover{
+    background:gold;
+    color:black;
 }
 
-.hero img{
-    width:250px;
-    border-radius:15px;
-    border:3px solid gold;
-}
-
-section{
-    padding:30px;
-    max-width:900px;
-    margin:auto;
+/* باکس‌ها */
+.container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+    padding:20px;
 }
 
 .card{
-    background:#1b1b1b;
-    padding:20px;
-    margin:15px 0;
-    border-radius:10px;
+    background:#111;
     border:1px solid #333;
+    padding:15px;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(255,215,0,0.2);
 }
 
-h2{
+.card h3{
     color:gold;
 }
 
+/* دکمه */
+.btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:8px 15px;
+    background:gold;
+    color:black;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+/* فوتر */
 footer{
     text-align:center;
     padding:20px;
-    background:#000;
-    border-top:2px solid gold;
+    margin-top:20px;
+    border-top:1px solid #333;
+    color:#aaa;
 }
 </style>
+
 </head>
 
 <body>
@@ -81,57 +119,46 @@ footer{
 <p>خادم اهل بیت (ع)</p>
 </header>
 
+<div class="hero">
+<img src="profile.jpg" alt="profile">
+</div>
+
 <nav>
-<a href="#about">درباره ما</a>
+<a href="#about">درباره</a>
 <a href="#maddahi">مداحی‌ها</a>
 <a href="#gallery">گالری</a>
-<a href="#contact">ارتباط با ما</a>
+<a href="#contact">ارتباط</a>
 </nav>
 
-<div class="hero">
-<img src="profile.jpg" alt="کربلایی امیرعلی امینی">
-<h2>به وب‌سایت رسمی کربلایی امیرعلی امینی خوش آمدید</h2>
+<div class="container">
+
+<div class="card" id="about">
+<h3>درباره من</h3>
+<p>این وب‌سایت رسمی کربلایی امیرعلی امینی است. شامل مداحی‌ها و برنامه‌ها.</p>
 </div>
 
-<section id="about">
-<div class="card">
-<h2>درباره ما</h2>
-<p>
-این وب‌سایت رسمی کربلایی امیرعلی امینی است.
-در این سایت می‌توانید مداحی‌ها، تصاویر و برنامه‌های مراسم را مشاهده کنید.
-</p>
+<div class="card" id="maddahi">
+<h3>مداحی‌ها 🎤</h3>
+<p>فایل‌های صوتی و مراسم‌های مذهبی اینجا قرار می‌گیرد.</p>
+<a class="btn" href="#">دانلود</a>
 </div>
-</section>
 
-<section id="maddahi">
-<div class="card">
-<h2>مداحی‌ها</h2>
-<ul>
-<li>شب اول محرم</li>
-<li>شب شهادت حضرت زهرا (س)</li>
-<li>شب‌های قدر</li>
-</ul>
+<div class="card" id="gallery">
+<h3>گالری 📸</h3>
+<p>تصاویر مراسم و هیئت</p>
+<a class="btn" href="#">مشاهده</a>
 </div>
-</section>
 
-<section id="gallery">
-<div class="card">
-<h2>گالری تصاویر</h2>
-<p>تصاویر مراسم و هیئت در این بخش قرار می‌گیرند.</p>
-</div>
-</section>
-
-<section id="contact">
-<div class="card">
-<h2>ارتباط با ما</h2>
+<div class="card" id="contact">
+<h3>ارتباط 📞</h3>
 <p>اینستاگرام: @amiraliamini</p>
 <p>تلگرام: @amiraliamini</p>
-<p>شماره تماس: 09XXXXXXXXX</p>
 </div>
-</section>
+
+</div>
 
 <footer>
-تمام حقوق این وب‌سایت متعلق به کربلایی امیرعلی امینی است.
+تمام حقوق محفوظ است © کربلایی امیرعلی امینی
 </footer>
 
 </body>
